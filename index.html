@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Windows 7 Simulation</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Windows 7 Interface</title>
+    <link rel="stylesheet" href="styles.css"> <!-- We'll add CSS styles later -->
 </head>
 <body>
-    <div id="taskbar">
-        <img src="taskbar.png" alt="Taskbar">
-        <div id="start-button" onclick="toggleStartMenu()">Start</div>
-    </div>
-    <div id="start-menu" class="hidden">
-        <img src="start-menu.png" alt="Start Menu">
-    </div>
-    <div id="window" class="hidden">
-        <img src="window.png" alt="Window">
+    <div class="windows-interface">
+        <!-- Taskbar -->
+        <div class="taskbar">
+            <div class="start-button">Start</div>
+            <div class="taskbar-icons"></div>
+        </div>
+        <!-- Desktop -->
+        <div class="desktop">
+            <!-- We'll add desktop icons and other elements later -->
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
