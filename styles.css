@@ -10,7 +10,7 @@ body {
     bottom: 0;
     width: 100%;
     height: 40px;
-    background: url('assets/windows7/taskbar.png') no-repeat;
+    background: url('taskbar.png') no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -29,7 +29,7 @@ body {
     bottom: 40px;
     left: 0;
     width: 200px;
-    background: url('assets/windows7/start-menu.png') no-repeat;
+    background: url('start-menu.png') no-repeat;
     background-size: cover;
     display: flex;
     align-items: flex-start;
@@ -41,7 +41,7 @@ body {
     top: 50px;
     left: 50px;
     width: 400px;
-    background: url('assets/windows7/window.png') no-repeat;
+    background: url('window.png') no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
