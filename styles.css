@@ -3,19 +3,21 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #f4f4f4;
 }
 
 header {
     background-color: #333;
     color: white;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
 }
 
 nav a {
-    color: white;
-    margin: 0 10px;
+    color: #61dafb;
+    margin: 0 15px;
     text-decoration: none;
+    font-weight: bold;
 }
 
 nav a:hover {
@@ -24,31 +26,70 @@ nav a:hover {
 
 main {
     padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
 }
 
 form div {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 form label {
     display: block;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
 form input {
     width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 form button {
-    padding: 10px 20px;
+    width: 100%;
+    padding: 10px;
     background-color: #333;
     color: white;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 form button:hover {
     background-color: #555;
 }
+
+.leaderboard-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fafafa;
+}
+
+.leaderboard-item p {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    header, nav, main {
+        padding: 10px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
