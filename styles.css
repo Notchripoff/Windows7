@@ -1,55 +1,38 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #0084ff; /* Windows 7 default background color */
+.windows-interface {
+    width: 100%;
+    height: 100vh;
+    background-color: #f0f0f0; /* Light gray background */
 }
 
-#taskbar {
+.taskbar {
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
     height: 40px;
-    background: url('taskbar.png') no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0 10px;
+    background-color: #333; /* Dark gray taskbar */
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-#start-button {
-    color: white;
-    font-weight: bold;
+.start-button {
+    float: left;
+    width: 40px;
+    height: 40px;
+    background-color: #0078d7; /* Windows 7 start button color */
+    border-radius: 5px;
     cursor: pointer;
 }
 
-#start-menu {
-    position: fixed;
-    bottom: 40px;
-    left: 0;
-    width: 200px;
-    background: url('start-menu.png') no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+.taskbar-icons {
+    float: right;
+    padding: 10px;
 }
 
-#window {
-    position: fixed;
-    top: 50px;
-    left: 50px;
-    width: 400px;
-    background: url('window.png') no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 300px;
-}
-
-.hidden {
-    display: none;
+.desktop {
+    width: 100%;
+    height: calc(100vh - 40px); /* Subtract taskbar height from desktop height */
+    background-color: #f0f0f0; /* Light gray desktop background */
+    padding: 20px;
 }
 
