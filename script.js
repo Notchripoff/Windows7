@@ -1,20 +1,16 @@
-const startButton = document.querySelector('.start-button');
+// Get the window elements
+const windows = document.querySelectorAll('.window');
 
-startButton.addEventListener('click', () => {
-    // Display a basic menu
-    const menu = document.createElement('div');
-    menu.innerHTML = `
-        <ul>
-            <li>Programs</li>
-            <li>Documents</li>
-            <li>Pictures</li>
-        </ul>
-    `;
-    menu.style.position = 'absolute';
-    menu.style.top = '40px';
-    menu.style.left = '0';
-    menu.style.background = '#fff';
-    menu.style.padding = '10px';
-    menu.style.border = '1px solid #ddd';
-    document.body.appendChild(menu);
+// Add event listeners for window management
+windows.forEach((window) => {
+  window.addEventListener('click', () => {
+    // Bring the window to the front
+    window.style.zIndex = 1;
+  });
+
+  window.addEventListener('dblclick', () => {
+    // Maximize the window
+    window.style.width = '100%';
+    window.style.height = '100%';
+  });
 });
