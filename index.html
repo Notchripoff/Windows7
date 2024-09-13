@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Speedrun Leaderboard</title>
+    <title>Windows 7 Simulation</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Speedrun Leaderboard</h1>
-        <nav>
-            <a href="#" id="homeLink">Home</a>
-            <a href="#" id="submitLink">Submit Time</a>
-            <a href="#" id="leaderboardLink">Leaderboard</a>
-        </nav>
-    </header>
-    <main id="content">
-        <!-- Dynamic content will be inserted here -->
-    </main>
+    <div id="taskbar">
+        <img src="assets/windows7/taskbar.png" alt="Taskbar">
+        <div id="start-button" onclick="toggleStartMenu()">Start</div>
+    </div>
+    <div id="start-menu" class="hidden">
+        <img src="assets/windows7/start-menu.png" alt="Start Menu">
+    </div>
+    <div id="window" class="hidden">
+        <img src="assets/windows7/window.png" alt="Window">
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
