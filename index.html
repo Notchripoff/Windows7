@@ -1,23 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Windows 7 Interface</title>
-    <link rel="stylesheet" href="styles.css"> <!-- We'll add CSS styles later -->
+  <title>Windows 7 Emulator</title>
+  <style>
+    /* CSS styles for the interface */
+    body {
+      background-color: #f0f0f0; /* Light gray background */
+      font-family: Segoe UI, Arial, sans-serif; /* Windows 7 font */
+    }
+
+    .taskbar {
+      background-color: #333; /* Dark gray taskbar */
+      padding: 5px;
+      border-top: 1px solid #444;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    .start-menu {
+      background-color: #f0f0f0; /* Light gray start menu */
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      display: none;
+    }
+
+    .desktop-icon {
+      width: 48px;
+      height: 48px;
+      margin: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .window {
+      background-color: #fff; /* White window background */
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
 </head>
 <body>
-    <div class="windows-interface">
-        <!-- Taskbar -->
-        <div class="taskbar">
-            <div class="start-button">Start</div>
-            <div class="taskbar-icons"></div>
-        </div>
-        <!-- Desktop -->
-        <div class="desktop">
-            <!-- We'll add desktop icons and other elements later -->
-        </div>
-    </div>
-    <script src="script.js"></script>
+  <!-- Taskbar with start button -->
+  <div class="taskbar">
+    <button id="start-button">Start</button>
+  </div>
+
+  <!-- Start menu -->
+  <div class="start-menu" id="start-menu">
+    <ul>
+      <li><a href="#">Programs</a></li>
+      <li><a href="#">Documents</a></li>
+      <li><a href="#">Pictures</a></li>
+    </ul>
+  </div>
+
+  <!-- Desktop icons -->
+  <div class="desktop-icon">
+    <img src="title-bar.png" alt="Icon 1">
+  </div>
+  <div class="desktop-icon">
+    <img src="taskbar.png" alt="Icon 2">
+  </div>
+
+  <!-- Windows -->
+  <div class="window">
+    <h1>Window 1</h1>
+  </div>
+  <div class="window">
+    <h1>Window 2</h1>
+  </div>
+
+  <script>
+    // JavaScript code for the start button functionality
+    const startButton = document.getElementById('start-button');
+    const startMenu = document.getElementById('start-menu');
+
+    startButton.addEventListener('click', () => {
+      startMenu.style.display = 'block';
+    });
+
+    document.addEventListener('click', (event) => {
+      if (event.target !== startButton && event.target !== startMenu) {
+        startMenu.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
